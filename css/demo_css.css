@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    margin: 0;
+}
+nav {
+    background-color: #D3D3D3;
+    padding: 10px;
+    border-bottom: solid #7C9D96 5px;
+}
+.splash {
+    background-color: #E3F4F4;
+    padding: 200px 0 0 0;
+}
+h1 {
+    color: #7C9D96;
+}
+h2 {
+    color: #0A6EBD;
+}
+hr {
+    border: dotted #c3c3c3 6px;
+    border-bottom: none;
+    margin: 30px auto;
+    width: 30%
+}
+
+
+
+
+img {
+    height: 300px;
+    width: 1000px;
+}

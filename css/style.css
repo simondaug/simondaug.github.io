@@ -1,0 +1,294 @@
+/* Everything just about */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-1: #EFE1D4;
+    --bg-2: #DEDACC;
+    --accent: #172221;
+    --text: #495D5B;
+    --text-accent: #981344;
+    --link: #981344;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    color: var(--text);
+    font-family: 'Dosis', sans-serif;
+    background-color: var(--bg-1);
+}
+
+/* Nav Bar Section */
+
+nav {
+    display: flex;
+    justify-content: right;
+    padding: 10px 20px;
+
+    background-color: var(--bg-2);
+    outline: auto;
+    outline-color: var(--accent);
+}
+
+nav a {
+    color: var(--text);
+    background-color: var(--bg-2);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    color: var(--text-accent);
+    background-color: var(--bg-1);    
+}
+
+/* Footer Section */
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+
+    background-color: var(--bg-2);
+    outline: auto;
+    outline-color: var(--accent)
+}
+
+footer a {
+    color: var(--text);
+    background-color: var(--bg-2);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+footer a:hover {
+    color: var(--text-accent);
+    background-color: var(--bg-1); 
+}
+
+/* Splash Section */
+
+.splash {
+    background-image: url("https://play.pokemonshowdown.com/fx/client-bg-shaymin.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% auto;
+
+    padding: 30px 0;
+}
+
+#me {
+    border-radius: 25%;
+}
+
+/* Cards Section */
+
+.content {
+    background-color: var(--bg-1);
+}  
+
+/* Links */
+
+a {
+    color: var(--link); /* Change me */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-accent); /* Change me */
+    text-decoration: none;
+    background-color: var(--bg-1); 
+}
+
+/* Cats */
+#cat1 {
+    position: absolute;
+    left: 30px;
+    border-radius: 50%;
+    transform: scaleX(-1);
+    animation: cat1anim 1s infinite;
+}
+
+@keyframes cat1anim {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+#cat2 {
+    position: absolute;
+    right: 30px;
+    border-radius: 50%;
+    animation: cat2anim 1s infinite;
+}
+
+@keyframes cat2anim {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+}
+
+/* idk */
+
+p, h1, h2 {
+    font-family: 'Comfortaa', cursive;
+    padding: 10px 10px;
+    margin: 20px 0;
+    border-radius: 20px;
+    background-color: var(--bg-1);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lang {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+}
+
+.job {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+}
+
+dt {
+    text-align: left;
+}
+
+dd {
+    text-align: right;
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+}
+
+
+/* Horizontal Rule */
+hr {
+    border: 5px dashed var(--accent);
+    border-top: 0px;
+}
+
+/* Contact */
+
+.contact {
+    background-color: var(--bg-1);
+    padding: 0;
+    margin: 0;
+}
+
+/* Contact card/form style */
+
+.card-style {
+    width: 350px;
+    height: 500px;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    background-color: var(--bg-2);
+}
+
+.one-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: var(--bg-1);
+}
+
+form {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 80%;
+    background-color: var(--bg-1);
+    color: var(--text-accent);
+    font-family: 'Dosis', sans-serif;
+}
+
+textarea {
+    width: 80%;
+    height: 70%;
+    background-color: var(--bg-1);
+    color: var(--text-accent);
+    font-family: 'Dosis', sans-serif;
+}
+
+/* Card stuff, theme it later... */
+
+.three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px 0;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-holder {
+    perspective: 800px;
+    width: 350px;
+    height: 500px;
+}
+
+.card-holder:hover > .card {
+    cursor: pointer;
+    transform: rotateY(-180deg) rotateZ(-180deg);
+    /* unsure */
+    border-radius: 2rem;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.card-back {
+    border-radius: 2em;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: var(--bg-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.back {
+    background-color: var(--bg-2);
+    transform: rotateY(180deg) rotateZ(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
